@@ -14,15 +14,15 @@
  
  
  
- Walker[] bob;
+Bacteria[] bob;
 
 void setup()
 {
   size(300,300);
-  bob = new Walker[1000];
+  bob = new Bacteria[1000];
   for(int i = 0; i < bob.length; i++)
   {
-    bob[i] = new Walker ();
+    bob[i] = new Bacteria ();
   }
 }
 
@@ -36,11 +36,13 @@ void draw ()
     }
 }
 
-class Walker
+class Bacteria
 {
+  int myColor;
   int myX, myY;
-  Walker()
+  Bacteria()
   {
+    myColor = color(((int)(Math.random()*155)+100), ((int)(Math.random()*155)+100), ((int)(Math.random()*155)+100));
     myY = 750;
     myX = 250;
   }
