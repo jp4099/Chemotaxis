@@ -20,6 +20,11 @@ void draw ()
     }
 }
 
+void mousePressed()
+{
+  redraw();
+}
+
 class Bacteria
 {
   int myColor;
