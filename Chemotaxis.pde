@@ -12,7 +12,7 @@ void setup()
 
 void draw ()
 {
-  background(0);
+  background(255,229,219);
   for(int i = 0; i < aiya.length; i++)
     {
     aiya[i].walk();
