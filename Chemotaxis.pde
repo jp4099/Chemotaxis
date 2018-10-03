@@ -22,7 +22,10 @@ void draw ()
 
 void mousePressed()
 {
-  redraw();
+  for(int i = 0; i < aiya.length; i++)
+  {
+    aiya[i] = new Bacteria();
+  }
 }
 
 class Bacteria
