@@ -23,24 +23,35 @@ void draw ()
 class Bacteria
 {
   int myColor;
-  int myX, myY;
+  int x, y;
   Bacteria()
   {
     myColor = color(((int)(Math.random()*155)+100), ((int)(Math.random()*155)+100), ((int)(Math.random()*155)+100));
-    myY = 250;
-    myX = 250;
+    x = 30;
+    y = 30;
   }
   
   void walk()
   {
-    myX = myX + (int)(Math.random()*3)-1;
-    myY = myY + (int)(Math.random()*3)-1;
+    if(mouseX > x)
+      x = x + (int)(Math.random()*3)-1;
+      else
+      x = x + (int)(Math.random()*3)+1;
+    if(mouseY > y)
+      y = y + (int)(Math.random()*3)-1;
+      else
+      y = y + (int)(Math.random()*3)+1;
+      
+      if(x == 300)
+      x = 30;
+      if(y == 300)
+      y = 30;
   }
   
   void show()
   {
     noStroke();
     fill(myColor);
-    ellipse(myX, myY, 25, 25);
+    ellipse(x, y, 25, 25);
   }
 }
